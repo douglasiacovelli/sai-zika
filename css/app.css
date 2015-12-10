@@ -30,6 +30,7 @@ body{
 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 	position: fixed;
 	z-index: 6;
+
 }
 
 .header a.logo{
@@ -37,12 +38,13 @@ body{
 	font-size: 1.3em;
 	font-weight: 500;
 	margin-left: 0;
-	line-height: 1.2;
+	line-height: 1.6;
 }
 .header ul{
 	list-style: none;
 	float: right;
 	margin: 0;
+	padding-top: 5px;
 }
 .header li{
 	display: inline;
@@ -116,9 +118,10 @@ main{
 
 .card a{
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 500;
 	color: #ff5133;
 	text-decoration: none;
+	font-size: 0.97em;
 }
 
 footer{
@@ -150,7 +153,7 @@ footer .social-share:hover i{
 	background-color: #f49000;
 }
 #card2 strong, #card2 li, #card2 p{
-	color: #fff;
+	color: #fff !important;
 }
 #card2 .img{
 	height: 7;
