@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Sai Zika": {
+      "applicationId": "xfMgYWfJOTbqqSkeiMRlVZxW1xDE5X2yLNMeWnJj"
+    },
+    "_default": {
+      "link": "Sai Zika"
+    }
+  }
+}

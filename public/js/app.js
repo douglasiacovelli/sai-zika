@@ -1,5 +1,27 @@
 $(document).foundation();
 
+Parse.initialize("xfMgYWfJOTbqqSkeiMRlVZxW1xDE5X2yLNMeWnJj", "P9kIWs1glJqeyqemuZGQvElVtrL9337O49lvLFjy");	
+// var TestObject = Parse.Object.extend("TestObject");
+// var testObject = new TestObject();
+// testObject.save({foo: "bar"}).then(function(object) {
+//   alert("yay! it worked");
+// });
+
+var Checklist = Parse.Object.extend("Checklist");
+var checklist = new Checklist();
+
+$("form").submit(function(e){
+	e.preventDefault();
+	var responses = {};
+	$("input[type=checkbox]").each(function(i,obj){
+		responses[obj.id] = obj.checked;
+	});
+	checklist.save(responses).then(function(object){
+		alert("Muito Obrigado! Suas respostas foram salvas");
+	});
+});
+
+
 function initMap() {
   // Specify features and elements to define styles.
   var styleArray = [
