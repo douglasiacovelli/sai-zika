@@ -69,7 +69,7 @@ main{
 .card{
 	background-color: #fff;
 	border-radius: 0.2rem;
-	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
 	margin: 0 0 1rem 0;
 	overflow: hidden;
 }
@@ -149,6 +149,35 @@ footer .social-share:hover i{
 	color: #413abd !important;
 }
 
+.list-row{
+	border-bottom: 1px solid #ebebeb;
+	padding-left: 0.5rem;
+}
+
+.list-row label{
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.list-row label{
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.list-row input[type=checkbox]{
+	width: 1rem;
+	height: 1rem;
+  	cursor: pointer;
+}
+
+
+h1#podemos-comecar{
+	font-weight: 300;
+	font-size: 1.7em;
+	color: #3ab982;
+	margin-top: 1rem;
+}
+
 #card2{
 	background-color: #f49000;
 }
@@ -158,4 +187,9 @@ footer .social-share:hover i{
 #card2 .img{
 	height: 7;
 }
+
+.card-cinza{
+	background-color: #7f8b9b !important;
+}
+
 #map { height: 80%; }
