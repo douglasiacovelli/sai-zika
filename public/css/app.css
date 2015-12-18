@@ -152,6 +152,7 @@ footer .social-share:hover i{
 .list-row{
 	border-bottom: 1px solid #ebebeb;
 	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 .list-row label{
@@ -170,8 +171,12 @@ footer .social-share:hover i{
   	cursor: pointer;
 }
 
+input#endereco{
+	height: 3.3rem;
+}
 
-h1#podemos-comecar{
+
+h1.titulo-verificar{
 	font-weight: 300;
 	font-size: 1.7em;
 	color: #3ab982;
