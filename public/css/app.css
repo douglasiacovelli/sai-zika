@@ -216,3 +216,7 @@ h1.titulo-verificar{
     background-size: 22px 40px; /* Since I used the HiDPI marker version this compensates for the 2x size */
     pointer-events: none; /* This disables clicks on the marker. Not fully supported by all major browsers, though */
 }
+
+#mapa{
+	height: 100%;
+}

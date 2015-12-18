@@ -1,11 +1,6 @@
 $(document).foundation();
 
 Parse.initialize("xfMgYWfJOTbqqSkeiMRlVZxW1xDE5X2yLNMeWnJj", "P9kIWs1glJqeyqemuZGQvElVtrL9337O49lvLFjy");	
-// var TestObject = Parse.Object.extend("TestObject");
-// var testObject = new TestObject();
-// testObject.save({foo: "bar"}).then(function(object) {
-//   alert("yay! it worked");
-// });
 
 var Checklist = Parse.Object.extend("Checklist");
 var checklist = new Checklist();
@@ -16,22 +11,31 @@ $("form").submit(function(e){
   //Verifica se endereço está vazio
   
   var local = new Parse.GeoPoint({latitude: map.getCenter().lat(), longitude: map.getCenter().lng()});
+  if(!primeiraVezClickMapa){
+    var respostas = {};
+    // Obtém todas as respostas e insere no dicionário respostas
+    var peloMenosUmTrue = false;
+    $("input[type=checkbox]").each(function(i,obj){
+      respostas[obj.id] = obj.checked;
+      if(obj.checked){
+        peloMenosUmTrue = true;
+      }
+    });
+    respostas['local'] = local;
 
-  var respostas = {};
-  // Obtém todas as respostas e insere no dicionário respostas
-  $("input[type=checkbox]").each(function(i,obj){
-   respostas[obj.id] = obj.checked;
- });
-  respostas['local'] = local;
-  
-  //Salvar as respostas no BD do Parse como Objeto "Checklist"
-  checklist.save(respostas).then(function(object){
-      alert("Muito Obrigado! Suas respostas foram salvas");
-  });
-
-
-
-
+    if(peloMenosUmTrue){
+      //Salvar as respostas no BD do Parse como Objeto "Checklist"
+      checklist.save(respostas).then(function(object){
+        alert("Muito Obrigado! Suas respostas foram salvas");
+        window.location.replace("/mapa.html");
+      });
+    }else{
+      alert("Por favor, preencha o formulário");
+    }
+    
+  }else{
+    alert("Por favor, marque no mapa o local vistoriado");
+  }
 });
 
 var enderecoInput = $("#endereco");
@@ -199,18 +203,45 @@ function initMap() {
   }
   ];
 
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('mapa'), {
     center: {lat: -15.3795415, lng: -58.3551554},
-    scrollwheel: false,
     zoom: 4,
     mapTypeControl: false,
     streetViewControl: false,
     styles: styleArray
   });
 
-  var infoWindow = new google.maps.InfoWindow({map: map});
-
-  
+  var Checklist = Parse.Object.extend("Checklist");
+  var query = new Parse.Query(Checklist);
+  query.find({
+    success: function(results) {
+      // Do something with the returned Parse.Object values
+      
+      var circle = {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillOpacity: 0.8,
+          fillColor: "green",
+          strokeOpacity: 1.0,
+          strokeColor: "green",
+          strokeWeight: 1.0,
+          scale: 5.0
+      };     
+      for (var i = 0; i < results.length; i++) {
+        var object = results[i];
+        var coord = object.get("local");
+        console.log(coord);
+        var local = {lat: coord.latitude,lng: coord.longitude}
+        var newCircle = new google.maps.Marker({
+          icon: circle,
+          position: local
+        });
+        newCircle.setMap(map);
+      }
+    },
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
