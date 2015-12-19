@@ -1,82 +1,128 @@
 <!doctype html>
 <html class="no-js" lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#413abd" />
-    
-    <title>Sai Zika | Faça sua parte, verifique sua casa e marque no mapa</title>
-    <meta name="Description" content="Você já verificou todos os lugares que o mosquito pode se desenvolver? Veja como proteger sua família e verifique se seus vizinhos estão fazendo sua parte.">
-    <meta name="Keywords" content="dengue, zika, aedes aegypti, mosquito, bairro, esconde, como, proteger, chicungunha, chikungunya, microcefalia">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#413abd" />
 
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/foundation-icons.css" />
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <div class="row full-width header">
-      
-      <a href="#" class="logo">Sai Zika</a>
-      <ul>
-        <li><a href="verificar.html">Verificar</a></li>
-        <li><a href="mapa.html">Mapa</a></li>
-      </ul>
-    </div>
-    <div class="space-10"></div>
-    <main>
-      <div class="row">
-        <div class="medium-12 large-6 columns card_holder">
-          <div class="card">
-            <div class="img" style="background-image: url('img/mosquito.jpg')">
-              <p style="position: absolute; font-size: 0.7em; line-height: 1; color: #fff; bottom: 0; right: 10px">Foto por James Gathany</p>
-            </div>
-            <div class="content">
-              <p>Recentemente o aumento no número de casos de microcefalia em determinadas regiões levou o Ministério da Saúde a estudar e identificar uma relação desta condição com o Zika vírus transmitido pelo mosquito <em>Aedes aegypti</em>, que também pode transmitir os vírus da Dengue e Chikungunya.</p>
-            </div>
+  <title>Sai Zika | Faça sua parte, verifique sua casa e marque no mapa</title>
+  <meta name="Description" content="Você já verificou todos os lugares que o mosquito pode se desenvolver? Veja como proteger sua família e verifique se seus vizinhos estão fazendo sua parte.">
+  <meta name="Keywords" content="dengue, zika, aedes aegypti, mosquito, bairro, esconde, como, proteger, chicungunha, chikungunya, microcefalia">
+
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/foundation-icons.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="row full-width header">
+    <a href="index.html" class="logo">Sai Zika</a>
+    <ul>
+      <li><a href="mapa.html">Mapa</a></li>
+    </ul>
+  </div>
+  <div class="space-10"></div>
+  <main>
+    <div class="row">
+    <div class="medium-12 large-12 columns card_holder">
+        <div class="card">
+          <div class="img" style="background-image: url('img/mosquito.jpg')">
+            <p style="position: absolute; font-size: 0.7em; line-height: 1; color: #fff; bottom: 0; right: 10px">Foto por James Gathany</p>
           </div>
-        </div>
-
-        <div class="medium-12 large-6 columns card_holder">
-          <div class="card" id="card2">
-            <div class="content">
-              <h1>Objetivos do Sai Zika</h1>
-              <ul>
-                <li>Conscientizar a população</li>
-                <li>Ajudar a vistoriar locais</li>
-                <li>Mapear os pontos vistoriados e áreas de risco</li>
-              </ul>
-            </div>
-            <div class="action-buttons">
-              <a href="verificar.html" style="color: #f05027;">Verificar local</a>
-              <a href="mapa.html" style="margin-left: 20px; color: #8999a1;">Ver o mapa</a>
-            </div>
+          <div class="content">
+            <p>O Sai Zika foi criado para conscientizar a população e mapear as residências vistoriadas e as áreas de risco. Ele foi feito devido ao recente aumento no número de casos de microcefalia e sua relação com o Zika vírus transmitido pelo mosquito <em>Aedes aegypti</em>, que também pode transmitir os vírus da Dengue e Chikungunya.</p>
+          </div>
+          <div class="action-buttons">
+            <a href="#complete" style="color: #f05027;">Vistoriar local</a>
+            <a href="mapa.html" style="margin-left: 20px; color: #8999a1;">Veja o mapa</a>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
+    </div>
+    <a class="anchor" name="complete"></a>
+    <div class="row">
+      <div class="medium-12 large-12 columns card_holder">
+        <div class="card card-cinza" id="card2">
+          <div class="content">
+            <h1>Vistorie seu local e complete o que checklist abaixo</h1>
+            
+            <p><strong>Responda o questionário honestamente, por favor.</strong> Nenhuma informação pessoal será divulgada. Os dados obtidos são anônimos e serão disponibilizados apenas para estudos e auxílio da prefeitura no combate ao mosquito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="titulo-verificar">Podemos começar</h1>
+        <form action="#">
+          <div class="card">
+            <div class="list-row">
+              <label for="vasos"><input id="vasos" type="checkbox">Meus vasos de plantas não acumulam água no pratinho</label>
+            </div>
+            <div class="list-row">
+              <label for="caixadaguas"><input id="caixadaguas" type="checkbox">As minhas caixas d'água estão tampadas</label>
+            </div>
+            <div class="list-row">
+              <label for="pneus"><input id="pneus" type="checkbox">Já olhei e não tenho pneus com água parada ou em local descoberto</label>
+            </div>
+            <div class="list-row">
+              <label for="garrafas"><input id="garrafas" type="checkbox">As garrafas que tenho guardadas estão de ponta cabeça</label>
+            </div>
+            <div class="list-row">
+              <label for="lixo"><input id="lixo" type="checkbox">O saco plástico onde jogo o meu lixo é fechado com tampa</label>
+            </div>
+          </div>
+          <div class="space-10"></div>
+          <h1 class="titulo-verificar">Se você mora em uma casa térrea ou sobrado:</h1>
+          <div class="card">
+            <div class="list-row">
+              <label for="casa"><input id="casa" type="checkbox">Moro em uma casa térrea/sobrado</label>
+            </div>
+            <div class="list-row">
+              <label for="calhas"><input id="calhas" type="checkbox">As calhas da minha casa estão limpas para a água escorrer</label>
+            </div>
+            <div class="list-row">
+              <label for="agente"><input id="agente" type="checkbox">Algum agente da prefeitura já vistoriou a minha casa</label>
+            </div>
+          </div>
+          <div class="space-10"></div>
+          <h1 class="titulo-verificar">Arraste o mapa e marque o local verificado</h1>
+          <p><strong>Por favor, marque o local correto para não gerar dados incorretos</strong></p>
+          <input id="coords" type="hidden"/>
+          <div id="mapaEscolherLocal"></div>
+          <div class="action-buttons" style="text-align: center">
+            <button class="button" type="submit" style="width: 15rem">ENVIAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
     <p>Compartilhe
       <a class="social-share" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.saizika.com.br"><i class="fi-social-facebook" target="_blank" ></i></a>
       <a class="social-share" href="https://twitter.com/home?status=http%3A//www.saizika.com.br%20-%20Saiba%20os%2020%20lugares%20que%20o%20Aedes%20Aegypti%20pode%20se%20desenvolver%20e%20veja%20se%20seus%20vizinhos%20est%C3%A3o%20fazendo%20sua%20parte" target="_blank"><i class="fi-social-twitter"></i></a>
     </p>
     <p style="color: #c2c2c2; font-size: 0.7em">CRIADO POR <a href="https://br.linkedin.com/in/douglasiacovelli" style="color: #c2c2c2;" target="_blank">DOUGLAS IACOVELLI</a></p>
-    </footer>
+  </footer>
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/what-input.min.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.6.11.min.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMx1sxdLtuXqc6G-80qJpkDKCv3JTwRBw&libraries=places&callback=initMapaEscolherLocal">
+</script>
+<script src="js/app.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-35893599-6', 'auto');
-    ga('send', 'pageview');
-    
+  ga('create', 'UA-35893599-6', 'auto');
+  ga('send', 'pageview');
 
-  </script>
-  </body>
+
+</script>
+</body>
 </html>

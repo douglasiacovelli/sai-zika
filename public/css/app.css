@@ -15,8 +15,6 @@ body{
 	background: #f9f9f9;
 }
 
-
-
 .full-width {
    width: 100%;
    margin-left: auto;
@@ -181,6 +179,13 @@ h1.titulo-verificar{
 	font-size: 1.7em;
 	color: #3ab982;
 	margin-top: 1rem;
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -70px;
+	visibility: hidden;
 }
 
 #card2{
